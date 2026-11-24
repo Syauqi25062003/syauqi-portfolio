@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import SectionTitle from '../components/SectionTitle'
-import { projects } from '../data/projects'
+import { projects } from '../Data/projects'
 import { certificates } from '../Data/certificates'
 
 const tabs = ['Projects', 'Certificates', 'Tech Stack']
