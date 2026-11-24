@@ -1,6 +1,6 @@
 
 import SectionTitle from '../components/SectionTitle'
-import { skills } from '../data/skills'
+import { skills } from '../Data/skills'
 
 const categoryIcons = {
   Frontend: '🎨',
