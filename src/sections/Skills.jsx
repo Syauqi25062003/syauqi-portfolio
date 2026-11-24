@@ -1,75 +1,56 @@
 
 import SectionTitle from '../components/SectionTitle'
-import TechBadge from '../components/TechBadge'
-import { skills } from '../Data/Skills'
+import { skills } from '../data/skills'
+
+const categoryIcons = {
+  Frontend: '🎨',
+  Backend: '⚙️',
+  Database: '🗄️',
+  Tools: '🛠️',
+}
 
 function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden border-y border-blue-100/70 bg-#F1F5F9"
+      className="relative overflow-hidden border-y border-slate-800 bg-[#111C31]"
     >
-      {/* Background Accent */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-blue-100/60 blur-3xl"
-      />
+      <div className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
         <SectionTitle
-          eyebrow="Skills & Technologies"
-          title="The tools behind my development workflow."
-          description="Technologies and tools I use to build web applications, from user interfaces to backend services and databases."
+          eyebrow="Keahlian Saya"
+          title="Teknologi yang saya gunakan"
+          description="Kumpulan teknologi dan alat yang saya gunakan untuk mengembangkan aplikasi web modern."
         />
 
-        {/* Skills Grid */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map((skill, index) => (
             <article
               key={skill.category}
-              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-950/5 sm:p-7"
+              className="animate-fade-up group rounded-2xl border border-slate-700/70 bg-[#0B1120] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50"
             >
-              {/* Top Accent */}
-              <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" />
-
-              {/* Category Header */}
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-blue-700 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
-                    <span className="text-sm font-bold">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </span>
-
-                  <h3 className="text-lg font-bold tracking-tight text-slate-900 sm:text-xl">
-                    {skill.category}
-                  </h3>
-                </div>
-
-                <span
-                  aria-hidden="true"
-                  className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-200 transition-colors duration-300 group-hover:bg-blue-600"
-                />
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 text-xl">
+                {categoryIcons[skill.category]}
               </div>
 
-              {/* Description */}
-              <p className="mt-5 text-sm leading-7 text-slate-600">
+              <h3 className="mt-5 text-lg font-bold text-white transition-colors group-hover:text-blue-400">
+                {skill.category}
+              </h3>
+
+              <p className="mt-2 min-h-12 text-sm leading-6 text-slate-400">
                 {skill.description}
               </p>
 
-              {/* Technologies */}
-              <div className="mt-6 border-t border-slate-100 pt-5">
-                <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
-                  Technologies
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {skill.technologies.map((technology) => (
-                    <TechBadge key={technology}>
-                      {technology}
-                    </TechBadge>
-                  ))}
-                </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {skill.technologies.map((technology) => (
+                  <span
+                    key={technology}
+                    className="rounded-md border border-slate-700 bg-slate-800/70 px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:border-blue-500/40 hover:text-blue-300"
+                  >
+                    {technology}
+                  </span>
+                ))}
               </div>
             </article>
           ))}
@@ -77,6 +58,6 @@ function Skills() {
       </div>
     </section>
   )
-}     
+}
 
 export default Skills

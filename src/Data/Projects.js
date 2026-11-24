@@ -2,11 +2,11 @@
 export const projects = [
   {
     title: 'Digital Library FTI',
-    type: 'Full-Stack Web Application',
+    type: 'Final Thesis · Full-Stack Development',
     description:
-      'Sistem Digital Library berbasis web untuk pengelolaan dan akses Laporan KP serta Skripsi FTI. Dikembangkan sebagai project skripsi dengan fokus pada pengelolaan dokumen, verifikasi, pencarian, dan deteksi kemiripan judul skripsi.',
+      'A web-based Digital Library system developed as a final thesis project to manage and provide access to internship reports (KP) and undergraduate theses at FTI. Built using the MERN Stack, with features for document management, administrator verification, document search, and title similarity detection.',
     technologies: [
-      'React',
+      'React.js',
       'Node.js',
       'Express.js',
       'MongoDB',
@@ -14,11 +14,11 @@ export const projects = [
       'Tailwind CSS',
     ],
     features: [
-      'Authentication & Role-Based Access Control',
-      'Upload dan verifikasi dokumen KP/Skripsi',
-      'Search & filtering dokumen',
-      'Preview dan download dokumen',
-      'Deteksi kemiripan judul menggunakan TF-IDF & Cosine Similarity',
+      'User authentication and role-based access control',
+      'PDF document upload and administrator verification',
+      'Document search and filtering',
+      'Document preview and download',
+      'Title similarity detection using TF-IDF and Cosine Similarity',
     ],
     githubUrl:
       'https://github.com/Syauqi25062003/digital-library-fti-skripsi',
@@ -27,13 +27,17 @@ export const projects = [
     title: 'StokKu — Aplikasi Manajemen Stok',
     type: 'Team Project · Frontend Development',
     description:
-      'Aplikasi web untuk membantu usaha mengelola persediaan produk dan memantau transaksi secara digital. Berkontribusi pada pengembangan frontend, dengan fokus pada tampilan dashboard dan halaman agar informasi stok serta aktivitas pengelolaan produk lebih mudah dipahami pengguna.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+      'A web application designed to help businesses manage product inventory and monitor transactions digitally. Contributed to the frontend development, focusing on dashboard interfaces and application pages to present product and transaction information clearly.',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+    ],
     features: [
-      'Tampilan dashboard untuk ringkasan stok dan transaksi',
-      'Antarmuka pengelolaan data produk',
-      'Halaman riwayat transaksi',
-      'Halaman login dan autentikasi pengguna',
+      'Dashboard interface for stock and transaction summaries',
+      'Product management interface',
+      'Transaction history page',
+      'Login and user authentication pages',
     ],
     githubUrl:
       'https://github.com/Syauqi25062003/Project-StokKu-Digital-StarUp',

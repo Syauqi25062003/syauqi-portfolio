@@ -6,7 +6,10 @@ function SectionTitle({ eyebrow, title, description }) {
         {eyebrow}
       </p>
 
-      <h2 className="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+      <h2
+        id="section-heading"
+        className="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl"
+      >
         {title}
       </h2>
 

@@ -1,35 +1,57 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const navItems = [
+  { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Education', href: '#education' },
+  { label: 'Portfolio', href: '#portfolio' },
   { label: 'Contact', href: '#contact' },
 ]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const handleNavClick = () => {
+    setIsOpen(false)
+  }
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
+
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-700/70 bg-[#0B1120]/95 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        {/* Logo / Name */}
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#080D1A]/80 backdrop-blur-xl">
+      <nav
+        aria-label="Main navigation"
+        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+      >
+        {/* Logo */}
         <a
           href="#home"
-          className="text-lg font-bold tracking-tight text-slate-100 transition-colors hover:text-blue-400"
+          onClick={handleNavClick}
+          className="text-2xl font-bold tracking-tight text-white"
         >
-          SYAUQI ZN<span className="text-blue-500"></span>
+          Syauqi Zainun Nauval<span className="text-blue-500"></span>
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-10 md:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-blue-400"
+              className="text-sm font-medium text-slate-300 transition-all duration-300 hover:text-blue-400"
             >
               {item.label}
             </a>
@@ -39,10 +61,11 @@ function Navbar() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="rounded-lg p-2 text-slate-200 transition-colors hover:bg-slate-800 hover:text-blue-400 md:hidden"
-          aria-label="Toggle navigation menu"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="rounded-lg p-2 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 md:hidden"
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +74,7 @@ function Navbar() {
             strokeWidth={1.8}
             stroke="currentColor"
             className="h-6 w-6"
+            aria-hidden="true"
           >
             {isOpen ? (
               <path
@@ -71,14 +95,17 @@ function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="border-t border-slate-700 bg-[#111C31] md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col px-6 py-3">
+        <div
+          id="mobile-navigation"
+          className="border-t border-white/10 bg-[#0B1120] md:hidden"
+        >
+          <div className="flex flex-col px-6 py-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="border-b border-slate-700/70 py-3 text-sm font-medium text-slate-300 transition-colors duration-200 last:border-b-0 hover:text-blue-400"
+                onClick={handleNavClick}
+                className="border-b border-white/5 py-4 text-sm font-medium text-slate-300 transition-colors last:border-none hover:text-blue-400"
               >
                 {item.label}
               </a>

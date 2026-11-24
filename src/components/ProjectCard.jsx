@@ -1,3 +1,4 @@
+
 import TechBadge from './TechBadge'
 
 function ProjectCard({ project, index = 0 }) {
@@ -30,7 +31,7 @@ function ProjectCard({ project, index = 0 }) {
         </p>
 
         <div className="flex flex-wrap gap-2">
-          {project.technologies.map((technology) => (
+          {(project.technologies || []).map((technology) => (
             <TechBadge key={technology}>
               {technology}
             </TechBadge>
@@ -45,12 +46,15 @@ function ProjectCard({ project, index = 0 }) {
         </h4>
 
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {project.features.map((feature) => (
+          {(project.features || []).map((feature) => (
             <li
               key={feature}
               className="flex items-start gap-2.5 text-sm leading-6 text-slate-300"
             >
-              <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+              <span
+                aria-hidden="true"
+                className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"
+              />
               <span>{feature}</span>
             </li>
           ))}
@@ -64,7 +68,7 @@ function ProjectCard({ project, index = 0 }) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
           >
             View Source Code
             <span aria-hidden="true">↗</span>

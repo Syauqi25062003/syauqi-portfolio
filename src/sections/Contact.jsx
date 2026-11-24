@@ -1,3 +1,4 @@
+
 import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 
@@ -5,77 +6,50 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative isolate overflow-hidden border-y border-slate-700/70 bg-[#111C31]"
+      className="relative overflow-hidden border-y border-slate-800 bg-[#0B1120]"
     >
-      {/* Background Accents */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl"
-      />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-purple-600/10 blur-3xl" />
 
-      <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
-        <div className="relative overflow-hidden rounded-3xl border border-slate-700/70 bg-[#17243A] p-7 shadow-xl shadow-black/10 sm:p-10 lg:p-14">
-          {/* Top Accent */}
-          <div className="absolute inset-x-0 top-0 h-1 bg-blue-500" />
+      <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-700/70 bg-[#111C31] p-8 text-center sm:p-12 lg:p-16">
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
 
-          {/* Decorative Shape */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-12 bottom-0 hidden h-64 w-64 rounded-full border-[32px] border-blue-500/10 sm:block"
-          />
-
-          <div className="relative max-w-3xl">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-xs font-semibold text-blue-300">
-              <span className="h-2 w-2 rounded-full bg-blue-400" />
-              Open to Opportunities
-            </div>
+          <div className="mx-auto max-w-2xl">
 
             <SectionTitle
-              eyebrow="Contact"
-              title="Let's build something meaningful together."
-              description="I'm open to opportunities in Web Development, Front-End Development, and Full-Stack Development. Feel free to reach out to discuss a job opportunity or collaboration."
+              eyebrow="Hubungi Saya"
+              title="Ayo terhubung dan bekerja sama."
+              description="Saya terbuka untuk peluang pengembangan web Front-End dan Full-Stack. Jangan ragu untuk menghubungi saya untuk kesempatan kerja atau kolaborasi profesional."
             />
 
-            {/* Contact Actions */}
-            <div className="flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button href="mailto:zainunnauval@gmail.com">
-                Email Me
+                Email Saya ↗
               </Button>
 
               <Button
                 href="https://github.com/Syauqi25062003"
                 variant="secondary"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
-                GitHub
+                GitHub ↗
               </Button>
             </div>
 
-            {/* Email Information */}
-            <div className="mt-8 flex flex-col gap-3 border-t border-slate-700/70 pt-6 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">
-                  Prefer email?
-                </p>
-
-                <a
-                  href="mailto:zainunnauval@gmail.com"
-                  className="mt-2 inline-block break-all text-sm font-semibold text-slate-100 transition-colors hover:text-blue-400 sm:text-base"
-                >
-                  zainunnauval@gmail.com
-                </a>
-              </div>
+            <div className="mt-10 border-t border-slate-700/70 pt-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
+                Anda juga dapat menghubungi saya di
+              </p>
 
               <a
-                href="https://github.com/Syauqi25062003"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300"
-              >
-                Explore my GitHub
-                <span aria-hidden="true">↗</span>
-              </a>
+            href="mailto:zainunnauval@gmail.com"
+            aria-label="Send an email to Syauqi Zainun Nauval"
+            className="mt-3 inline-block break-all text-base font-semibold text-slate-200 transition hover:text-blue-400 sm:text-lg"
+          >
+            zainunnauval@gmail.com
+          </a>
             </div>
           </div>
         </div>

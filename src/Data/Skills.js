@@ -1,12 +1,15 @@
+
 export const skills = [
   {
     category: 'Frontend',
     description: 'Building responsive and interactive user interfaces.',
     technologies: [
       'JavaScript',
-      'React',
+      'React.js',
       'Vite',
       'Tailwind CSS',
+      'HTML',
+      'CSS',
     ],
   },
   {
@@ -28,10 +31,11 @@ export const skills = [
   },
   {
     category: 'Tools',
-    description: 'Tools used for development and project management.',
+    description: 'Using development tools for version control, API testing, and coding.',
     technologies: [
       'Git',
       'GitHub',
+      'Postman',
       'VS Code',
     ],
   },

@@ -1,157 +1,184 @@
 
-import SectionTitle from '../components/SectionTitle'
+import profileImage from '../assets/images/profile/profile.jpg'
 
-function About() {
-  const focusAreas = [
-    {
-      number: '01',
-      title: 'Web Applications',
-      description:
-        'Building responsive and functional web applications.',
-    },
-    {
-      number: '02',
-      title: 'Frontend Development',
-      description:
-        'Creating clean and user-friendly interfaces with React.',
-    },
-    {
-      number: '03',
-      title: 'Full-Stack Development',
-      description:
-        'Connecting frontend, backend, APIs, and databases into complete applications.',
-    },
-  ]
 
-  const technologies = [
-    'JavaScript',
-    'React',
-    'Node.js',
-    'Express.js',
-    'MongoDB',
-  ]
+const highlights = [
+  {
+    value: 'S.Kom.',
+    label: 'Lulusan Informatika',
+    description: 'Universitas Sebelas April',
+  },
+  {
+    value: '3.54/4.00',
+    label: 'Indeks Prestasi Kumulatif',
+    description: 'Sarjana Informatika',
+  },
+  {
+    value: 'MERN',
+    label: 'Development Stack',
+    description: 'MongoDB, Express, React, Node.js',
+  },
+]
 
+function About({ onViewCV }) {
   return (
     <section
       id="about"
-      className="relative isolate overflow-hidden border-y border-slate-700/60 bg-[#111C31]"
+      className="relative isolate overflow-hidden bg-[#0B1120] py-24 sm:py-28"
     >
-      {/* Background Accent */}
+      {/* Background Decorations */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-28 top-16 -z-10 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl"
+        className="pointer-events-none absolute -left-40 top-20 -z-10 h-96 w-96 rounded-full bg-blue-600/10 blur-[120px]"
       />
 
-      <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
-        <SectionTitle
-          eyebrow="About Me"
-          title="A web developer focused on building useful and well-structured digital experiences."
-        />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 bottom-0 -z-10 h-96 w-96 rounded-full bg-purple-600/10 blur-[120px]"
+      />
 
-        <div className="grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
-          {/* About Content */}
-          <div className="space-y-6">
-            <p className="text-base leading-8 text-slate-300 sm:text-lg">
-              Saya adalah fresh graduate S1 Informatika Universitas Sebelas
-              April yang memiliki ketertarikan pada pengembangan aplikasi
-              web. Saya menikmati proses mengubah ide dan kebutuhan menjadi
-              aplikasi yang dapat digunakan secara nyata.
-            </p>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-            <p className="text-base leading-8 text-slate-300 sm:text-lg">
-              Saya berfokus pada pengembangan web menggunakan{' '}
-              <span className="font-semibold text-blue-300">
-                JavaScript, React, Node.js, Express.js, dan MongoDB
-              </span>
-              . Saya tertarik mempelajari bagaimana frontend, backend, dan
-              database dapat bekerja bersama untuk membangun aplikasi yang
-              fungsional dan terstruktur.
-            </p>
+        {/* Section Heading */}
+        <div className="mb-14 text-center">
+          <span className="text-sm font-bold uppercase tracking-[0.25em] text-blue-400">
+           Get to Know Me
+          </span>
 
-            <p className="text-base leading-8 text-slate-300 sm:text-lg">
-              Sebagai seorang fresh graduate, saya terus mengembangkan
-              kemampuan melalui project dan eksplorasi teknologi baru. Saya
-              terbuka untuk belajar, bekerja dalam tim, serta menghadapi
-              tantangan baru dalam pengembangan aplikasi web.
-            </p>
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
+            About <span className="text-blue-400">Me</span>
+          </h2>
 
-            {/* Profile Highlight */}
-            <div className="flex items-center gap-4 border-t border-slate-700 pt-6">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-sm font-bold text-white shadow-md shadow-blue-600/20">
-                S.Kom.
-              </div>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+           Sedikit perkenalan tentang latar belakang, minat, dan perjalanan saya di bidang pengembangan web.
+          </p>
+        </div>
 
-              <div>
-                <p className="font-semibold text-slate-100">
-                  Informatics Graduate
+        {/* Main About Content */}
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+          {/* Profile Image */}
+          <div className="relative mx-auto w-full max-w-md">
+
+            {/* Decorative Background */}
+            <div className="absolute -left-5 -top-5 h-28 w-28 rounded-tl-3xl border-l-2 border-t-2 border-blue-500/70" />
+
+            <div className="absolute -bottom-5 -right-5 h-28 w-28 rounded-br-3xl border-b-2 border-r-2 border-purple-500/70" />
+
+            {/* Image Frame */}
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-2 shadow-2xl shadow-blue-950/30">
+              <img
+                src={profileImage}
+                alt="Syauqi Zainun Nauval"
+                loading="lazy"
+                className="aspect-[4/5] w-full rounded-2xl object-cover object-center"
+              />
+
+              {/* Image Overlay */}
+              <div className="absolute inset-x-2 bottom-2 rounded-b-2xl bg-gradient-to-t from-[#080D1A]/95 to-transparent px-6 pb-6 pt-16">
+                <p className="text-lg font-bold text-white">
+                  Syauqi Zainun Nauval
                 </p>
-                <p className="mt-1 text-sm text-slate-400">
-                  Universitas Sebelas April · 2022–2026
+                <p className="mt-1 text-sm text-blue-300">
+                  Full-Stack Web Developer
                 </p>
               </div>
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute -right-3 top-8 rounded-xl border border-white/10 bg-[#17243A]/95 px-4 py-3 shadow-xl backdrop-blur sm:-right-8">
+              <p className="text-xs text-slate-400">
+                Pendidikan
+              </p>
+              <p className="mt-1 text-sm font-bold text-white">
+                S1 Informatika
+              </p>
             </div>
           </div>
 
-          {/* Developer Focus Card */}
-          <aside className="relative h-fit overflow-hidden rounded-2xl border border-slate-700 bg-[#17243A] p-6 shadow-xl shadow-black/20 sm:p-7">
-            {/* Card Accent */}
-            <div className="absolute inset-x-0 top-0 h-1 bg-blue-500" />
+          {/* Introduction */}
+          <div>
+            <span className="inline-flex rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-xs font-semibold text-blue-300">
+              Halo! Senang bertemu dengan Anda
+            </span>
 
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-400">
-              Developer Focus
-            </p>
-
-            <h3 className="mt-4 text-xl font-bold tracking-tight text-slate-100">
-              What I enjoy building.
+            <h3 className="mt-6 text-2xl font-bold leading-snug text-white sm:text-3xl">
+              Halo, saya Syauqi Zainun Nauval, seorang pengembang web Full-Stack yang bersemangat dalam membangun aplikasi web modern dan responsif.
             </h3>
 
-            <div className="mt-6 space-y-5">
-              {focusAreas.map((area, index) => (
-                <div
-                  key={area.number}
-                  className="flex gap-4"
-                >
-                  <span
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${
-                      index === 0
-                        ? 'bg-blue-600 text-white'
-                        : 'border border-blue-400/20 bg-blue-500/10 text-blue-300'
-                    }`}
-                  >
-                    {area.number}
-                  </span>
-
-                  <div className="pt-0.5">
-                    <h4 className="text-sm font-semibold text-slate-100">
-                      {area.title}
-                    </h4>
-
-                    <p className="mt-1.5 text-sm leading-6 text-slate-400">
-                      {area.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            <div className="mt-6 space-y-5 text-sm leading-8 text-slate-400 sm:text-base">
+              <p>
+                Saya adalah lulusan Teknik Informatika dari Universitas Sebelas April yang memiliki minat dalam pengembangan web Full-Stack, 
+                khususnya menggunakan STACK MERN (MongoDB, Express.js, React.js, dan Node.js). </p>              
+              <p>
+              <p>
+                Proyek tugas akhir saya adalah pengembangan Perpustakaan Digital FTI, sebuah sistem berbasis web untuk mengelola laporan kerja praktik (KP) dan skripsi. 
+                Dibangun menggunakan React.js, Node.js, Express.js, dan MongoDB, sistem ini menyediakan berbagai fitur seperti pengunggahan dokumen, 
+                verifikasi oleh administrator, pencarian dokumen, serta pendeteksian kemiripan judul menggunakan metode TF-IDF dan Cosine Similarity.
+              </p>
+              </p>
+              <p>
+               Saya memiliki semangat dalam menciptakan antarmuka pengguna yang intuitif, menulis kode yang terorganisir, serta terus meningkatkan keterampilan teknis saya. 
+               Saya juga antusias untuk belajar, berkolaborasi dengan orang lain, dan menghadapi tantangan baru dalam pengembangan web.
+              </p>
             </div>
 
-            {/* Core Stack */}
-            <div className="mt-7 border-t border-slate-700 pt-5">
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
-                Core Stack
+            {/* Action Buttons */}
+            <div className="mt-8 flex flex-wrap gap-4">
+            <button
+              type="button"
+              onClick={onViewCV}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-blue-500/20"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                className="h-4 w-4"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z"
+                />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              Lihat CV
+            </button>
+
+              <a
+                href="#portfolio"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:text-blue-300"
+              >
+                Lihat Proyek
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Highlights */}
+        <div className="mt-24 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {highlights.map((item) => (
+            <div
+              key={item.label}
+              className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-blue-500/[0.05]"
+            >
+              <p className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-3xl font-extrabold text-transparent">
+                {item.value}
               </p>
 
-              <div className="mt-3 flex flex-wrap gap-2">
-                {technologies.map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-xs font-semibold text-blue-300 transition-colors hover:border-blue-400/50 hover:bg-blue-500/20"
-                  >
-                    {technology}
-                  </span>
-                ))}
-              </div>
+              <h4 className="mt-3 text-base font-bold text-white">
+                {item.label}
+              </h4>
+
+              <p className="mt-2 text-sm text-slate-400">
+                {item.description}
+              </p>
             </div>
-          </aside>
+          ))}
         </div>
       </div>
     </section>
