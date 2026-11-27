@@ -196,15 +196,23 @@ function Projects() {
         className="group flex flex-col rounded-2xl border border-slate-700/70 bg-[#111C31] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50"
       >
         {/* Certificate Icon */}
-        <div className="flex items-center justify-between">
-          <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 text-2xl">
-            📜
-          </div>
 
-          <span className="text-sm font-semibold text-slate-500">
-            {String(index + 1).padStart(2, '0')}
-          </span>
+      {/* Certificate Thumbnail */}
+      <div className="relative overflow-hidden rounded-xl border border-slate-700 bg-white">
+        <div className="aspect-[4/3]">
+          <img
+            src={certificate.thumbnail}
+            alt={`Certificate: ${certificate.title}`}
+            loading="lazy"
+            className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
+
+        <span className="absolute right-3 top-3 rounded-md bg-[#0B1120]/80 px-2 py-1 text-xs font-semibold text-white">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+      </div>
+
 
         {/* Certificate Information */}
         <div className="mt-6 flex-1">

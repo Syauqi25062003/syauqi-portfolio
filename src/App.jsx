@@ -100,7 +100,7 @@ function App() {
             {/* PDF Preview */}
             <div className="min-h-0 flex-1 bg-slate-900">
               <iframe
-                src="/Syauqi_Zainun_Nauval_CV.pdf#toolbar=1&navpanes=0"
+                src="/CV Syauqi Zainun Nauval.pdf#toolbar=1&navpanes=0"
                 title="CV Syauqi Zainun Nauval"
                 className="h-full w-full border-0"
               />

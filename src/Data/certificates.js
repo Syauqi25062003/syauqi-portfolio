@@ -1,17 +1,19 @@
 
 export const certificates = [
-  {
-    title: 'Basics of Machine Learning',
-    issuer: 'Great Learning Academy',
-    date: 'May 2024',
-    file: '/certificates/Basics%20of%20Machine%20Learning.pdf',
-    verifyUrl: 'https://verify.mygreatlearning.com/OUHPDJRV',
-  },
+ {
+  title: 'Basics of Machine Learning',
+  issuer: 'Great Learning Academy',
+  date: 'May 2024',
+  file: '/certificates/Basics%20of%20Machine%20Learning.pdf',
+  thumbnail: '/certificates/thumbnails/basics-machine-learning.png',
+  verifyUrl: 'https://verify.mygreatlearning.com/OUHPDJRV',
+},
   {
     title: 'Machine Learning Algorithms',
     issuer: 'Great Learning Academy',
     date: 'May 2024',
     file: '/certificates/Machine%20Learning%20Algoritma.pdf',
+    thumbnail: '/certificates/thumbnails/machine-learning-algorithms.png',
     verifyUrl: 'https://verify.mygreatlearning.com/KGQLBJPE',
   },
   {
@@ -19,6 +21,7 @@ export const certificates = [
     issuer: 'Great Learning Academy',
     date: 'May 2024',
     file: '/certificates/introduction%20to%20Supervised%20Learning.pdf',
+    thumbnail: '/certificates/thumbnails/supervised-learning.png',
     verifyUrl: 'https://verify.mygreatlearning.com/ZSIZYMTE',
   },
   {
@@ -26,7 +29,32 @@ export const certificates = [
     issuer: 'Great Learning Academy',
     date: 'May 2024',
     file: '/certificates/Introduction%20to%20Unsupervised%20Learning.pdf',
+    thumbnail: '/certificates/thumbnails/unsupervised-learning.png',
     verifyUrl: 'https://verify.mygreatlearning.com/ONDVJWHH',
+  },
+  {
+    title: 'Big Data Analytics Course',
+    issuer: 'Great Learning Academy',
+    date: 'May 2024',
+    file: '/certificates/Big%20Data%20Analytics%20Course.pdf',
+    thumbnail: '/certificates/thumbnails/big-data-analytics.png',
+    verifyUrl: 'https://www.mygreatlearning.com/certificate/YQTHXBIN',
+  },
+  {
+    title: 'Data Visualisation with Python',
+    issuer: 'Great Learning Academy',
+    date: 'June 2024',
+    file: '/certificates/Data%20Visualisation%20with%20Python.pdf',
+    thumbnail: '/certificates/thumbnails/data-visualisation-python.png',
+    verifyUrl: 'https://www.mygreatlearning.com/certificate/XYXQHYPV',
+  },
+  {
+    title: 'Data Visualization using Python',
+    issuer: 'Great Learning Academy',
+    date: 'June 2024',
+    file: '/certificates/Data%20Visualization%20using%20Python%20%283%29.pdf',
+    thumbnail: '/certificates/thumbnails/data-visualization-python.png',
+    verifyUrl: 'https://www.mygreatlearning.com/certificate/NFAKXQLS',
   },
   {
     title: 'Obtain an Appropriate Job',
@@ -34,6 +62,7 @@ export const certificates = [
     date: 'January 3, 2025',
     duration: '123 Hours',
     file: '/certificates/Wadhwani%20Foundation%20Certificate%20-%206777d3a2cdb748e542d223b4.pdf',
+    thumbnail: '/certificates/thumbnails/obtain-appropriate-job.png',
   },
   {
     title: 'JobReady Employability Skills',
@@ -41,5 +70,6 @@ export const certificates = [
     date: 'January 3, 2025',
     duration: '123 Hours',
     file: '/certificates/Wadhwani%20Foundation%20Certificate%20-%206777d502d95a8cf1203587f8.pdf',
+    thumbnail: '/certificates/thumbnails/jobready-employability.png',
   },
 ]
