@@ -6,6 +6,7 @@ import { certificates } from '../Data/certificates'
 const tabs = ['Projects', 'Certificates', 'Tech Stack']
 
 
+
 const technologies = [
   { name: 'HTML5', icon: 'devicon-html5-plain colored' },
   { name: 'CSS3', icon: 'devicon-css3-plain colored' },
@@ -15,14 +16,21 @@ const technologies = [
   { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-original colored' },
   { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
   { name: 'Express.js', icon: 'devicon-express-original' },
+  { name: 'PHP', icon: 'devicon-php-plain colored' },
+  { name: 'Laravel', icon: 'devicon-laravel-original colored' },
   { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
   { name: 'Mongoose', icon: 'devicon-mongoose-original' },
+  { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+  { name: 'Java', icon: 'devicon-java-plain colored' },
+  { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
+  { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
   { name: 'Git', icon: 'devicon-git-plain colored' },
   { name: 'GitHub', icon: 'devicon-github-original' },
   { name: 'Postman', icon: 'devicon-postman-plain colored' },
   { name: 'Vercel', icon: 'devicon-vercel-original' },
   { name: 'Figma', icon: 'devicon-figma-plain colored' },
 ]
+
 
 function Projects() {
   const [activeTab, setActiveTab] = useState('Projects')
@@ -83,7 +91,7 @@ function Projects() {
         <SectionTitle
           eyebrow="My Portfolio"
           title="Proyek & Keahlian Teknis"
-          description="Jelajahi proyek-proyek saya, sertifikat yang saya miliki, serta teknologi yang saya gunakan untuk membangun aplikasi web modern."
+         description="Explore my development projects, certificates, and the technologies and tools I have worked with."
         />
 
         {/* Tabs */}
@@ -357,13 +365,14 @@ function Projects() {
         </div>
 
         <button
-          type="button"
-          onClick={closeCertificate}
-          aria-label="Close certificate preview"
-          className="shrink-0 rounded-lg px-3 py-1 text-2xl text-slate-400 transition hover:bg-slate-800 hover:text-white"
-        >
-          ×
-        </button>
+        ref={closeButtonRef}
+        type="button"
+        onClick={closeCertificate}
+        aria-label="Close certificate preview"
+        className="shrink-0 rounded-lg px-3 py-1 text-2xl text-slate-400 transition hover:bg-slate-800 hover:text-white"
+      >
+        ×
+      </button>
       </div>
 
       {/* PDF Preview */}

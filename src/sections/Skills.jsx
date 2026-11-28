@@ -6,7 +6,9 @@ const categoryIcons = {
   Frontend: '🎨',
   Backend: '⚙️',
   Database: '🗄️',
+  'Backend Services': '🔗',
   Tools: '🛠️',
+  'Additional Technologies': '📚',
 }
 
 function Skills() {
@@ -19,15 +21,16 @@ function Skills() {
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
         <SectionTitle
-          eyebrow="Keahlian Saya"
-          title="Teknologi yang saya gunakan"
-          description="Kumpulan teknologi dan alat yang saya gunakan untuk mengembangkan aplikasi web modern."
+          eyebrow="My Skills"
+          title="Technologies & Tools"
+          description="Technologies and tools I have used or explored through projects, coursework, and practical experience."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
             <article
               key={skill.category}
+              style={{ animationDelay: `${index * 100}ms` }}
               className="animate-fade-up group rounded-2xl border border-slate-700/70 bg-[#0B1120] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10 text-xl">

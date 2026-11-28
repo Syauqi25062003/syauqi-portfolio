@@ -4,7 +4,7 @@ export const projects = [
     title: 'Digital Library FTI',
     type: 'Final Thesis · Full-Stack Development',
     description:
-      'A web-based Digital Library system developed as a final thesis project to manage and provide access to internship reports (KP) and undergraduate theses at FTI. Built using the MERN Stack, with features for document management, administrator verification, document search, and title similarity detection.',
+      'A web-based Digital Library system developed as a final thesis project to manage internship reports (KP) and undergraduate theses at FTI. Built using React.js, Node.js, Express.js, and MongoDB, featuring document management, administrator verification, document search, and title similarity analysis.',
     technologies: [
       'React.js',
       'Node.js',
@@ -18,26 +18,29 @@ export const projects = [
       'PDF document upload and administrator verification',
       'Document search and filtering',
       'Document preview and download',
-      'Title similarity detection using TF-IDF and Cosine Similarity',
+      'Title similarity analysis using TF-IDF and Cosine Similarity',
     ],
     githubUrl:
       'https://github.com/Syauqi25062003/digital-library-fti-skripsi',
   },
   {
     title: 'StokKu — Aplikasi Manajemen Stok',
-    type: 'Team Project · Frontend Development',
+    type: 'Team Project · Web Development',
     description:
-      'A web application designed to help businesses manage product inventory and monitor transactions digitally. Contributed to the frontend development, focusing on dashboard interfaces and application pages to present product and transaction information clearly.',
+      'A web-based inventory management application developed as a team project to help businesses manage products and monitor transactions. Contributed to frontend development, while also assisting with PHP Native backend implementation and MySQL database management.',
     technologies: [
       'HTML',
       'CSS',
       'JavaScript',
+      'PHP Native',
+      'MySQL',
     ],
     features: [
       'Dashboard interface for stock and transaction summaries',
       'Product management interface',
       'Transaction history page',
-      'Login and user authentication pages',
+      'Frontend form validation and interactive user interfaces',
+      'Integration of forms with PHP and MySQL',
     ],
     githubUrl:
       'https://github.com/Syauqi25062003/Project-StokKu-Digital-StarUp',

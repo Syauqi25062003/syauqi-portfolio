@@ -2,17 +2,19 @@
 import { useEffect, useState } from 'react'
 
 const roles = [
-  'Frontend Developer',
-  'Full-Stack Web Developer',
-  'Informatics Graduate',
+  'Frontend Development',
+  'Backend Development',
+  'Database Management',
 ]
 
-
 const technologies = [
-  'MongoDB',
-  'Express.js',
   'React.js',
   'Node.js',
+  'Express.js',
+  'MongoDB',
+  'PHP',
+  'MySQL',
+  'JavaScript',
   'Tailwind CSS',
 ]
 
@@ -42,9 +44,12 @@ function Hero() {
       <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
 
-
+          {/* Main Heading */}
           <h1 className="animate-fade-up text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Welcome to My Portofolio 
+            Hi, I'm
+            <span className="mt-2 block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Syauqi Zainun Nauval
+            </span>
           </h1>
 
           {/* Main Role */}
@@ -65,10 +70,14 @@ function Hero() {
               |
             </span>
           </div>
-          {/* Description */}   
+
+          {/* Description */}
           <p className="mx-auto mt-7 max-w-2xl text-sm leading-8 text-slate-400 sm:text-base">
-            Lulusan Informatika dengan pengalaman praktis dalam membangun aplikasi web menggunakan React.js, Node.js, Express.js, dan MongoDB.
-           Memiliki minat dalam mengembangkan antarmuka pengguna yang responsif serta solusi web yang fungsional.
+            Lulusan Informatika yang memiliki pengalaman dalam
+            membangun aplikasi web, mulai dari pengembangan
+            antarmuka pengguna hingga pengelolaan Back-End dan
+            database. Tertarik mengembangkan aplikasi web yang
+            responsif, fungsional, dan mudah digunakan.
           </p>
 
           {/* Technology Badges */}

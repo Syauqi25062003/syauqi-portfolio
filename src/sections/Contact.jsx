@@ -20,7 +20,7 @@ function Contact() {
             <SectionTitle
               eyebrow="Hubungi Saya"
               title="Ayo terhubung dan bekerja sama."
-              description="Saya terbuka untuk peluang pengembangan web Front-End dan Full-Stack. Jangan ragu untuk menghubungi saya untuk kesempatan kerja atau kolaborasi profesional."
+              description="Saya terbuka terhadap peluang karier di bidang pengembangan web, khususnya Front-End dan Full-Stack Development. Silakan hubungi saya untuk kesempatan kerja, proyek, maupun kolaborasi profesional."
             />
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -43,13 +43,13 @@ function Contact() {
                 Anda juga dapat menghubungi saya di
               </p>
 
-              <a
-            href="mailto:zainunnauval@gmail.com"
-            aria-label="Send an email to Syauqi Zainun Nauval"
-            className="mt-3 inline-block break-all text-base font-semibold text-slate-200 transition hover:text-blue-400 sm:text-lg"
-          >
-            zainunnauval@gmail.com
-          </a>
+             <a
+              href="mailto:zainunnauval@gmail.com"
+              aria-label="Send an email to Syauqi Zainun Nauval"
+              className="mt-3 inline-block break-all text-base font-semibold text-slate-200 transition hover:text-blue-400 sm:text-lg"
+            >
+              zainunnauval@gmail.com
+            </a>
             </div>
           </div>
         </div>

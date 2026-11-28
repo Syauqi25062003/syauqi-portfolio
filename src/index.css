@@ -70,3 +70,7 @@ section[id] {
     transition-duration: 0.01ms !important;
   }
 }
+::selection {
+  background: rgb(59 130 246 / 30%);
+  color: #ffffff;
+}

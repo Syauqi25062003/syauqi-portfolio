@@ -23,8 +23,9 @@ function Footer() {
             </a>
 
             <p className="mt-2 max-w-sm text-sm leading-6 text-slate-400">
-              Pengembang web full-stack yang berfokus pada pembuatan aplikasi web yang responsif dan ramah pengguna.
-            </p>
+            Full-Stack Web Developer interested in building responsive,
+            functional, and user-friendly web applications.
+          </p>
           </div>
 
           <nav

@@ -66,12 +66,12 @@ function Education() {
                 </div>
 
                 <div>
-                  <p className="text-xs text-slate-400">Degree</p>
-                  <p className="mt-1 font-bold text-white">S.Kom.</p>
-                  <p className="text-xs text-slate-400">
-                    Computer Science
-                  </p>
-                </div>
+                <p className="text-xs text-slate-400">Degree</p>
+                <p className="mt-1 font-bold text-white">S.Kom.</p>
+                <p className="text-xs text-slate-400">
+                  Bachelor of Informatics
+                </p>
+              </div>
               </div>
             </div>
 
@@ -102,10 +102,10 @@ function Education() {
             </div>
 
             <p className="mt-6 text-sm leading-7 text-slate-400">
-              Latar belakang akademis di bidang Informatika, 
-              dengan minat pada rekayasa perangkat lunak, pengembangan frontend, 
-              serta pembangunan aplikasi web yang fungsional.
-            </p>
+            Memiliki latar belakang akademis di bidang Informatika dengan
+            minat pada rekayasa perangkat lunak dan pengembangan aplikasi
+            web, baik dari sisi frontend maupun backend.
+          </p>
           </div>
         </div>
       </div>

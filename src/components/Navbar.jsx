@@ -2,11 +2,11 @@
 import { useEffect, useState } from 'react'
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
+  ['Home', '#home'],
+  ['About', '#about'],
+  ['Skills', '#skills'],
+  ['Portfolio', '#portfolio'],
+  ['Contact', '#contact'],
 ]
 
 function Navbar() {
@@ -42,7 +42,7 @@ function Navbar() {
           onClick={handleNavClick}
           className="text-2xl font-bold tracking-tight text-white"
         >
-          Syauqi Zainun Nauval<span className="text-blue-500"></span>
+          Syauqi Zainun Nauval
         </a>
 
         {/* Desktop Navigation */}
@@ -51,7 +51,7 @@ function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-300 transition-all duration-300 hover:text-blue-400"
+              className="text-sm font-medium text-slate-300 transition-all duration-300 hover:text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-4 focus-visible:ring-offset-[#080D1A]"
             >
               {item.label}
             </a>
@@ -62,7 +62,7 @@ function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
-          className="rounded-lg p-2 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 md:hidden"
+          className="border-b border-white/5 py-4 text-sm font-medium text-slate-300 transition-colors last:border-none hover:text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
           aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"

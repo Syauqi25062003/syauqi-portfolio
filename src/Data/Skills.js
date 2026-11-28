@@ -2,41 +2,63 @@
 export const skills = [
   {
     category: 'Frontend',
-    description: 'Building responsive and interactive user interfaces.',
+    description: 'Creating responsive and interactive web interfaces.',
     technologies: [
-      'JavaScript',
-      'React.js',
-      'Vite',
-      'Tailwind CSS',
       'HTML',
       'CSS',
+      'JavaScript',
+      'React.js',
+      'Tailwind CSS',
+      'Vite',
     ],
   },
   {
     category: 'Backend',
-    description: 'Developing server-side applications and REST APIs.',
+    description: 'Building server-side applications and handling application logic.',
     technologies: [
       'Node.js',
       'Express.js',
+      'PHP Native',
       'REST API',
     ],
   },
   {
     category: 'Database',
-    description: 'Managing application data and database operations.',
+    description: 'Managing application data and working with database systems.',
     technologies: [
       'MongoDB',
       'Mongoose',
+      'MySQL',
+    ],
+  },
+  {
+    category: 'Backend Services',
+    description: 'Exploring authentication and managed backend services through project integration.',
+    technologies: [
+      'Firebase',
+      'Supabase',
     ],
   },
   {
     category: 'Tools',
-    description: 'Using development tools for version control, API testing, and coding.',
+    description: 'Using tools for development, version control, API testing, and deployment.',
     technologies: [
       'Git',
       'GitHub',
       'Postman',
       'VS Code',
+      'Vercel',
+      'Figma',
+    ],
+  },
+  {
+    category: 'Additional Technologies',
+    description: 'Other technologies explored through coursework and practical exercises.',
+    technologies: [
+      'Laravel',
+      'Java',
+      'TypeScript',
+      'Bootstrap',
     ],
   },
 ]
